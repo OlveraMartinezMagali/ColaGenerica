@@ -1,0 +1,98 @@
+public class PruebaColaG
+{
+  public static void main(String args[])
+  {
+  //Entero
+  System.out.println("\n_________________INTEGER___________________\n");
+  Cola<Integer> CI =new Cola<>(3);
+  try{
+         System.out.println("agregamos 1");
+         CI.encolar(1);
+         System.out.println("agregamos 2");
+         CI.encolar(2);
+         //SACAR
+         int V= CI.sacar();         
+         System.out.println("Sacamos "+ V);
+         V= CI.sacar();
+         System.out.println("Sacamos "+ V);
+         System.out.println("agregamos 10");
+         CI.encolar(10);
+         
+      }catch(ExcepcionColaLlena Err){
+         System.out.println(Err.getMessage());
+        }catch(ExcepcionColaVacia Err){  
+         System.out.println(Err.getMessage());
+        }
+  
+  //Double
+  System.out.println("\n_________________DOUBLE___________________\n");
+  Cola<Double> CD =new Cola<>(3);
+  try{
+        System.out.println("agregamos: 1.2 ");
+         CD.encolar(1.2);
+         System.out.println("agregamos: 5.3");
+         CD.encolar(5.3);
+         //SACAR
+         double D= CD.sacar();         
+         System.out.println("Sacamos "+ D);
+         D= CD.sacar();
+         System.out.println("Sacamos "+ D);
+         System.out.println("agregamos: 9.8");
+         CD.encolar(9.8);    
+          
+       }catch(ExcepcionColaLlena Err){
+         System.out.println(Err.getMessage());
+        }catch(ExcepcionColaVacia Err){  
+         System.out.println(Err.getMessage());
+        }
+  
+  //String
+  System.out.println("\n_________________STRING___________________\n");
+  Cola<String> CS =new Cola<>(3);
+  try{
+        System.out.println("agregamos: Hola ");
+         CS.encolar("Hola");
+         System.out.println("agregamos: Mundo");
+         CS.encolar("Mundo");
+         //SACAR
+         String S= CS.sacar();         
+         System.out.println("Sacamos "+ S);
+         S= CS.sacar();
+         System.out.println("Sacamos "+ S);
+         System.out.println("agregamos: Hello");
+         CS.encolar("Hello");    
+          
+       }catch(ExcepcionColaLlena Err){
+         System.out.println(Err.getMessage());
+        }catch(ExcepcionColaVacia Err){  
+         System.out.println(Err.getMessage());
+        }
+        
+        
+  //Estudiante
+  System.out.println("\n_________________Estudiante__________________\n");
+  Cola<Estudiante> CE =new Cola<>(3);
+  try{
+        Estudiante e1,e2, e3;
+        e1= new Estudiante("Leonardo", "0123321");
+        e2= new Estudiante("Magali", "18590243");
+        e3= new Estudiante("Adriana", "18561543");
+         System.out.println("agregamos: "+"Leonardo"+ " 0123321");
+         CE.encolar(e1);
+         System.out.println("agregamos: "+"Magali"+ " 18590243");
+         CE.encolar(e2);
+         //SACAR
+         Estudiante Ref1= CE.sacar();          
+         System.out.println("Sacamos: "+ Ref1);
+         Estudiante Ref2= CE.sacar(); 
+         System.out.println("Sacamos: "+ Ref2);
+         System.out.println("agregamos: "+"Adriana"+ " 18560543");
+         CE.encolar(e3);    
+          
+       }catch(ExcepcionColaLlena Err){
+         System.out.println(Err.getMessage());
+        }catch(ExcepcionColaVacia Err){  
+         System.out.println(Err.getMessage());
+        }    
+  }
+}
